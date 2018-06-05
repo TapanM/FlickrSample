@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FlickrSample</string>
+
+    <string name="home_title">Home</string>
+
+    <string name="no_feed">No Feeds available.</string>
+    <string name="err_internet_connection">No internet connection found. Check your connection or try again.</string>
+    <string name="err_server_down">Something went wrong. Try again later</string>
+
+</resources>
