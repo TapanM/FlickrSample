@@ -11,11 +11,11 @@ import android.widget.TextView;
 
 import com.tapan.flickrsample.FlickrApplication;
 import com.tapan.flickrsample.R;
+import com.tapan.flickrsample.adapters.FeedAdapter;
 import com.tapan.flickrsample.listeners.OnClickListener;
+import com.tapan.flickrsample.objects.FeedObject;
 import com.tapan.flickrsample.utils.URLs;
 import com.tapan.flickrsample.utils.Utils;
-import com.tapan.flickrsample.adapters.FeedAdapter;
-import com.tapan.flickrsample.objects.FeedObject;
 import com.tapan.flickrsample.views.ItemDecoration;
 
 import java.util.ArrayList;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         initViews();
         clickViews();
         setRecyclerView();
-        getFeed();
+        getFlickerFeed();
     }
 
     private void initViews() {
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             @Override
             public void onRefresh() {
 
-                getFeed();
+                getFlickerFeed();
             }
         });
     }
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mRecyclerView.setAdapter(mAdapter);
     }
 
-    private void getFeed() {
+    private void getFlickerFeed() {
 
         mSwipeRefreshLayout.setRefreshing(false);
         mProgressbarLayout.setVisibility(View.VISIBLE);
